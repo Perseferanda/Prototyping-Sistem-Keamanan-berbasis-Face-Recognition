@@ -45,6 +45,6 @@ Memanfaatkan kamera untuk menangkap gambar wajah pengguna dan menggunakan algori
    python faceRecognition.py
 
 # Tampilan Sistem
-![Home](SetUp/UI.png)
+![Home](https://www.google.com/imgres?q=ui%20ux&imgurl=https%3A%2F%2Fosccdn.medcom.id%2Fimages%2Fcontent%2F2022%2F09%2F13%2F21ab8e8d512e1b613a5c8dec5ed481c9.jpg&imgrefurl=https%3A%2F%2Fosc.medcom.id%2Fcommunity%2Fmengenal-ui-ux-design-dan-perbedaannya-4122&docid=qLR3NJIjWxUXtM&tbnid=9DdD5VYUBTrl_M&vet=12ahUKEwjByqbht-aHAxV1n2MGHeGLCN0QM3oECB0QAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjByqbht-aHAxV1n2MGHeGLCN0QM3oECB0QAA?row=true)
 
    
