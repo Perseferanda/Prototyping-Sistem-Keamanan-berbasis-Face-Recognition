@@ -379,7 +379,7 @@ def SignIn_ACSystem():
                                                                 cv2.LINE_AA)
                                                     # cv2.putText(frame, "User Not Registered", (50, 50),
                                                     #             cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
-                                                    break
+                                                    SignIn_ACSystem()
 
                                 # Handle window closing evenyt for screen3(Sign In Interface)
                                 close = screen3.protocol("WM_DELETE_WINDOW", Close_Window2)
