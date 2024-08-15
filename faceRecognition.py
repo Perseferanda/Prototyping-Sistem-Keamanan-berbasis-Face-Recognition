@@ -382,7 +382,7 @@ def SignIn_ACSystem():
                                                     break
 
                                 # Handle window closing evenyt for screen3(Sign In Interface)
-                                close = screen3.protocol("WM_DELETE_WINDOW", Close_Window)
+                                close = screen3.protocol("WM_DELETE_WINDOW", Close_Window2)
 
                             # Draw keypoints for eyebrows
                             cv2.circle(frame, (x7, y7), 2, (255, 0, 0), cv2.FILLED)
