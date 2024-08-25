@@ -39,7 +39,7 @@ Memanfaatkan kamera untuk menangkap gambar wajah pengguna dan menggunakan algori
    cd Prototyping-Sistem-Keamanan-berbasis-face-Recognition
 2. Instal dependensi:
    ```bash
-   pip install -r requirements.txt
+   pip install -r Libraries.txt
 4. Jalankan Aplikasi
    ```bash
    python faceRecognition.py
