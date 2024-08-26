@@ -38,9 +38,14 @@ Memanfaatkan kamera untuk menangkap gambar wajah pengguna dan menggunakan algori
    
    cd Prototyping-Sistem-Keamanan-berbasis-face-Recognition
 2. Instal dependensi:
+
+**Catatan:**
+-  Saat menginstal Libraries, pastikan agar librari Protobuf versi-nya di sesuaikan dengan Face-Recognition jika saat di install dan di rekomendasikan untuk mengupgred ke versi tertentu, maka install lah versi yang di rekomendasikan, Karena akan sangat berpengaruh saat menjalankan programnya.
+-  jika tidak bisa menginstal dlib, pastikan untuk anda mengistal CMake terlebih dahulu dan juga menginstal Visual Studio Installer serta mendownload Workloads: Python development dan Dekstop development with C++. (lebih jelasnya tonton tutorial ini: https://youtu.be/eaEndTeUiSU?si=XN8guk4y4o_r0wvp)
+
    ```bash
    pip install -r Libraries.txt
-4. Jalankan Aplikasi
+3. Jalankan Aplikasi
    ```bash
    python faceRecognition.py
 
