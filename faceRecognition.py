@@ -20,7 +20,7 @@ def add_attendance(Names, Ids, Statuss):
     Fungsi ini akan menambahkan baris baru ke worksheet Excel dengan informasi pengguna dan waktu akses.
     """
     # Path file Excel
-    file_path = 'E:/AccessControl System/DataBase/Attandances.xlsx'
+    file_path = 'C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/DataBase/Attandances.xlsx'
 
     # Load workbook dan pilih worksheet aktif
     workbook = load_workbook(file_path)
@@ -60,6 +60,7 @@ def Profile():
     # Reset Variables
     step = 0
     count = 0
+    print(f"Profile - Reset: step={step}, count={count}")
 
     # Window
     screen4 = Toplevel(screen)
@@ -91,11 +92,13 @@ def Profile():
 
         # Label IMG
         lblimage = Label(screen4)
-        lblimage.place(x=540, y=144)
+        lblimage.place(x=512, y=121)
 
         # Image
         ImgId = cv2.imread(f"{OutFolderPathFaces}/{Id}.png")
         ImgId = cv2.cvtColor(ImgId, cv2.COLOR_RGB2BGR)
+        # Resize image to 50x50
+        ImgId = cv2.resize(ImgId, (250, 270))
         ImgId = Image.fromarray(ImgId)
 
         IMG = ImageTk.PhotoImage(image=ImgId)
@@ -379,7 +382,7 @@ def SignIn_ACSystem():
                                                                 cv2.LINE_AA)
                                                     # cv2.putText(frame, "User Not Registered", (50, 50),
                                                     #             cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
-                                                    SignIn_ACSystem()
+                                                    SignUp()
 
                                 # Handle window closing evenyt for screen3(Sign In Interface)
                                 close = screen3.protocol("WM_DELETE_WINDOW", Close_Window2)
@@ -668,9 +671,9 @@ def SignIn():
 
 
 # ___Path to Access Database
-OutFolderPathUsers = "E:/AccessControl System/DataBase/Users"
-PathUsersCheck = "E:/AccessControl System/DataBase/Users"
-OutFolderPathFaces = "E:/AccessControl System/DataBase/Faces"
+OutFolderPathUsers = "C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/DataBase/Users"
+PathUsersCheck = "C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/DataBase/Users"
+OutFolderPathFaces = "C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/DataBase/Faces"
 
 # ___Info List
 info = []
@@ -701,11 +704,11 @@ FaceObject = mp.solutions.face_detection
 detector = FaceObject.FaceDetection(min_detection_confidence=0.5, model_selection=1)
 
 # Read IMG
-img_check = cv2.imread("E:/AccessControl System/SetUp/Check.png")
-img_step0 = cv2.imread("E:/AccessControl System/SetUp/InfoUncomplite.png")
-img_step1 = cv2.imread("E:/AccessControl System/SetUp/Stap1.png")
-img_step2 = cv2.imread("E:/AccessControl System/SetUp/Stap2.png")
-img_comp = cv2.imread("E:/AccessControl System/SetUp/InfoComplite.png")
+img_check = cv2.imread("C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/SetUp/Check.png")
+img_step0 = cv2.imread("C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/SetUp/InfoUncomplite.png")
+img_step1 = cv2.imread("C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/SetUp/Stap1.png")
+img_step2 = cv2.imread("C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/SetUp/Stap2.png")
+img_comp = cv2.imread("C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/SetUp/InfoComplite.png")
 
 # ___Main Window
 screen = Tk()
@@ -713,12 +716,12 @@ screen.title("Access Controll System")
 screen.geometry("1280x720")
 
 # __Image
-ImageF = PhotoImage(file="E:/AccessControl System/SetUp/Home.png")
+ImageF = PhotoImage(file="C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/SetUp/Home.png")
 background = Label(image=ImageF, text="Home")
 background.place(x=0, y=0, relheight=1, relwidth=1)
 
 # __PROFILE
-Imagebc = PhotoImage(file="E:/AccessControl System/SetUp/UserInterfarance.png")
+Imagebc = PhotoImage(file="C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/SetUp/UserInterfarance.png")
 
 # __Input Text
 # Name
@@ -735,12 +738,12 @@ InputStatusReg.place(x=95, y=480)
 
 # __Button
 # SignUp
-ImageBR = PhotoImage(file="E:/AccessControl System/SetUp/BTrainData.png")
+ImageBR = PhotoImage(file="C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/SetUp/BTrainData.png")
 BtReg = Button(screen, text="Registration", image=ImageBR, height="38", width="230", command=SignUp)
 BtReg.place(x=160, y=550)
 
 # SignIn
-ImageSI = PhotoImage(file="E:/AccessControl System/SetUp/BUnlock.png")
+ImageSI = PhotoImage(file="C:/Users/muham/Prototyping-Sistem-Keamanan-berbasis-Face-Recognition/SetUp/BUnlock.png")
 BtUnlock = Button(screen, text="Unlock", image=ImageSI, height="38", width="170", command=SignIn)
 BtUnlock.place(x=880, y=550)
 
